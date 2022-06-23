@@ -4,7 +4,7 @@ SET FNAME="%~1%"
 SET FNAME_TMP="%~1.tmp"
 SET GUARD=generated_version_header
 
-FOR /F "" %%F IN ('"git describe --tags --dirty --long --abbrev=7"') DO (
+FOR /F "" %%F IN ('"git describe --tags --always --dirty --long --abbrev=7"') DO (
 	SET ver=%%F
 )
 
