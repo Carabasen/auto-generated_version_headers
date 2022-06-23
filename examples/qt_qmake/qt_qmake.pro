@@ -6,7 +6,7 @@ CONFIG += c++11
 
 #version header generator
 VHDR_PATH_NAME = $$PWD/uversion.h
-VHDR_GEN_SCRIPT = $$PWD/../../generate_version_header
+VHDR_GEN_SCRIPT_PATH = $$PWD/../../generate_version_header
 include(../../generate_version_header/generate_version_header.pri)
 
 SOURCES += \
