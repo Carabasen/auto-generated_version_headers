@@ -15,8 +15,8 @@ endif (WIN32)
 
 if (UNIX)
     add_custom_target(
-            version_header
-            COMMAND ${VHDR_GEN_SCRIPT_PATH}/generate_version_header.sh ${VHDR_PATH_NAME}
-            WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
+        version_header
+        COMMAND ${VHDR_GEN_SCRIPT_PATH}/generate_version_header.sh ${VHDR_PATH_NAME}
+        WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
     )
 endif (UNIX)
