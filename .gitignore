@@ -1,3 +1,5 @@
 examples/build*
 *.user
 uversion.h
+CMakeLists.txt.*
+*.pro.user.*
