@@ -1,7 +1,7 @@
 @echo off
 REM SET stime=%TIME:~0,-3%
 SET FNAME="%~1%"
-SET FNAME_TMP="%~1.tmp"
+SET FNAME_TMP="%~1.new"
 SET GUARD=generated_version_header
 
 FOR /F "" %%F IN ('"git describe --tags --always --dirty --long --abbrev=7"') DO (

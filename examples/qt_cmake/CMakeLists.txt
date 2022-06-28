@@ -21,10 +21,10 @@ find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
 set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+    main.cpp
+    mainwindow.cpp
+    mainwindow.h
+    mainwindow.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -51,6 +51,7 @@ else()
 endif()
 
 target_link_libraries(qt_cmake PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+add_dependencies(qt_cmake version_header)
 
 set_target_properties(qt_cmake PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
